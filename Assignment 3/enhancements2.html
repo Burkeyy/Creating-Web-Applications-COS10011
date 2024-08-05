@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="Provides an introduction to what Canvas is"
+    />
+    <meta name="keywords" content="Canvas, University, Education" />
+    <meta name="author" content="Anthony Burke" />
+    <title>What is Canvas?</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/enhancements2.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Canvas</h1>
+
+        <nav>
+          <ul>
+            <li id="index"><a href="index.php">Home</a></li>
+            <li id="topic"><a href="topic.php">Topic</a></li>
+            <li id="quiz"><a href="quiz.php">Quiz</a></li>
+            <li id="manage"><a href="manage.php">Manage</a></li>
+            <li id="enhancements">
+              <a href="enhancements.html">Enhancements</a>
+            </li>
+            <li id="enhancements2">
+              <a href="enhancements2.html">Enhancements 2</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="main3">
+      <h1>Enhancements 2</h1>
+
+      <p>
+        I've implemented two enhancements in this assignment. If you look at the
+        menu nav above, you'll notice the current page is highlighted in black.
+        I use the window.location.pathname to retrieve the current path to the
+        html page. I then use a substring method to retrieve the string between
+        the last "/" and ".". I store all of this in a variable called
+        "selectedMenuID". I then retrieve what's in this variable with
+        getElementbyID(selectedMenuID), and store it in another variable called
+        "SelectedMenu". Finally, whatever is stored in "SelectedMenu" gets
+        assigned the class name of "activeItem" which gets referenced by the CSS
+        file.
+      </p>
+
+      <p>
+        The second enhancement is a simple timer that begins when the user
+        enters the Quiz page. It works by calling the "timer" function every
+        second, which adds 1 to the current "time" variable. It displays the
+        result in the span element id "timeDisplay" using ".textContent". Once
+        the condition "time == 200" is met, the "timeDisplay.textContent" will
+        now show "Times up!!", and the submit button will be removed by using
+        "getElementbyID("submit").remove. I then clear the interval using the
+        "clearinterval" method.
+      </p>
+    </div>
+    <footer>
+      <hr />
+      <p>
+        Mark up by:<a href="mailto:103358702@student.swin.edu.au">
+          Anthony Burke</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
