@@ -1,0 +1,295 @@
+/*
+filename: anthony burke	
+author: anthony burke
+created: 19/08/2020
+last modified: 19/08/20
+description: index.html css
+*/
+
+body {
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+}
+
+
+/*
+INDEX
+*/
+
+/*
+NAVIGATION BAR CODE  for each page
+reference https://www.youtube.com/watch?v=FEmysQARWFU
+*/
+
+
+
+	.container {
+		width: 80%;
+		margin: 0 auto;
+	}
+	
+	header {
+		background: #394ae6
+	}
+	
+	header::after {
+		content: '';
+		display: table;
+		clear: both
+	}
+	.logo {
+		float: left;
+		color: white;
+		font-size: xx-large;
+		
+	}
+	
+	
+	nav {
+		float: right;
+	}
+	
+	
+	/*
+	takes margin off bottom and top of UL in nav bar
+	*/
+	nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+	
+	/*
+	makes Lists in nav bar horizontal
+	*/
+	
+	nav li {
+	display: inline-block;
+	margin-left: 70px;
+	padding-top: 33px;
+	/*
+	this relative position is needed when doing the absolute
+	position of nav a:: further down
+	*/
+	position: relative;
+	}
+	
+	
+	/*
+	Nav bar formatting (color, uppercase etc)
+	*/
+	nav a {
+		color: white;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+	
+	/* 
+	hover animation - black
+	*/
+	nav a:hover {
+		color: #000
+	
+	}
+	
+	/*
+	adds a little bar above the list item that is 5px high and the 
+	width of the list word
+	also removes top padding so the bar reaches top of browser
+	then removes width so it's invisible for the time being
+	*/
+	nav a::before {
+		content: '';
+		display: block;
+		height: 5px;
+		background-color: #000000;
+		position: absolute;
+		top: 0;
+		width: 0%;
+		transition: all ease-in-out 240ms;
+	}
+	
+	/*
+	reveals the width of block when hovering over
+	*/
+	nav a:hover::before {
+		width: 100%;
+	}
+
+
+/*
+Background - index page
+*/
+
+.wrapper{
+	background-image: url("images/BGcanvas.jpg");
+	background-size: cover;
+	height: 100vh;
+	margin-bottom: 0em;
+	
+}
+
+/* text on background - index page
+*/
+
+.center {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	font-family: 'poppins', sans-serif;
+
+}
+
+.center h1{
+	color: white;
+	font-size: 75px;
+	font-weight: bold;
+	
+}
+
+
+/*
+footer 
+*/
+
+footer {
+	text-align: center;
+	font-size: small;
+	font-family:'Poppins';
+}
+
+
+/*
+TOPIC
+*/
+
+
+
+/*
+Aside
+Reference - https://www.youtube.com/watch?v=qmqD4aTv18Q&list=PLMx00Lcxa3p81GUZonMlV-ibLc4ue01f_&index=12&t=5s
+*/
+
+.aside {
+	width: 25%;
+	background-color: rgba(228, 228, 228, 0.897);
+	border-style: solid;
+	border-color: rgb(255, 221, 69);
+	margin-right: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	font-style: italic;
+	float: right;
+	
+	
+
+}
+
+/*
+main section
+*/
+
+.main {
+	width: 70%;
+	background-color: rgba(228, 228, 228, 0.897);
+	margin-left: 10px;
+	margin-right: 320px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius:5px;
+	font-size: 110%;
+	padding: 20px;
+}
+
+
+/*
+Topic Canvas Interface image
+*/
+.imgcanvas {
+	width: 1000px;
+	height: 600px;
+}
+
+/*
+Topic canvas image italic
+*/
+
+#italic {
+	font-style: italic;
+	font-size: small;
+}
+
+
+/*
+topic page h1 font
+*/
+
+h1 {
+	font-family: 'Poppins', sans-serif;
+	font-size: xx-large;
+}
+
+
+/*
+topic page table and heading
+*/
+
+#centerh2 {
+	text-align: center;
+}
+
+#comparison {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 70%;
+}
+
+#comparison td, #comparison th {
+	border: 1px solid;
+	padding: 8px;
+
+}
+
+#comparison td {
+	background-color: darkgrey;
+}
+
+#comparison th {
+	text-align: left;
+	background-color: #1d47bb;
+	color: white;
+}
+
+/*
+table section background colour
+*/
+#bottom {
+	background-color:rgba(228, 228, 228, 0.897);
+	padding-top: 5px;
+	padding-bottom: 65px;
+	margin-bottom: 10px;
+}
+
+/*
+adding in a margin for the text on enhancement page
+*/ 
+#main2 {
+
+	margin-left: 100px;
+	margin-right: 100px;
+	
+}
+
+
+
+/*
+References for Topic Info
+https://www.trustradius.com/compare-products/canvas-vs-google-classroom#:~:text=Canvas%20and%20Google%20Classroom%20are%20both%20academic%20learning%20management%20systems.&text=The%20difference%20between%20Canvas%20and,used%20by%20primary%20education%20institutions.
+https://community.canvaslms.com/t5/Canvas-Basics-Guide/What-is-Canvas/ta-p/45
+https://www.riohondo.edu/canvas-orientation/what-is-canvas/
+https://en.wikipedia.org/wiki/Instructure
+*/
